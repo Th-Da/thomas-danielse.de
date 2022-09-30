@@ -11,10 +11,5 @@ export class AppComponent {
   title = 'thomas-danielse.de';
 
   ngOninit() {
-    AOS.init({
-
-      offset: 120,
-      duration: 300
-    });
   }
 }

@@ -13,9 +13,7 @@ export class HomeSectionComponent implements OnInit {
 
   ngOnInit(): void {
     AOS.init({
-
-      offset: 120,
-      duration: 300
+      duration: 1500
     });
   }
 
