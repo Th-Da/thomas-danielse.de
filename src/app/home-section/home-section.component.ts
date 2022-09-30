@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import * as AOS from 'aos';
+
 
 @Component({
   selector: 'app-home-section',
@@ -10,6 +12,11 @@ export class HomeSectionComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    AOS.init({
+
+      offset: 120,
+      duration: 300
+    });
   }
 
 }
