@@ -1,23 +1,28 @@
 .home-section {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: flex-start;
     background-color: #000000;
     height: 100vh;
     padding: 45px 105px 0 105px;
+    justify-content: flex-start;
 
 
     span {
         font-size: 64px !important;
     }
 
-    img {
-        width: 230px;
-        border-radius: 180px;
-        margin-right: 105px;
-        margin-top: 40px;
+    button {
+        position: relative;
+        bottom: 50px;
     }
 
+}
+
+.home-section-child {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .position-absolut {
@@ -42,4 +47,19 @@
     display: inline-block;
     animation: 1s ease-out 1.5s 2 flipLetter;
     animation-fill-mode: forwards;
+}
+
+.profil-img {
+    width: 230px;
+    border-radius: 180px;
+    margin-right: 60px;
+    margin-top: 40px;
+}
+
+.arrow-img {
+    filter: brightness(0) invert(1);
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 40px;
 }

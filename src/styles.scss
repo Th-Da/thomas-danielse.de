@@ -14,13 +14,16 @@ html {
     h2 {
         font-size: 32px;
         margin: 0;
+        font-weight: 800;
     }
 
     p,
     a,
-    span {
+    span,
+    button {
         font-size: 18px;
         margin: 0;
+        font-weight: 700;
     }
 }
 
@@ -32,6 +35,28 @@ body {
     margin: 0;
     box-sizing: border-box;
 }
+
+.primary-default {
+    border: 3px solid #2dfcda;
+    color: #2dfcda;
+    background-color: #000000;
+    padding: 24px 105px 24px 105px;
+    cursor: pointer;
+    transition: 150ms;
+
+    &:hover {
+        background-color: #2dfcda;
+        color: white;
+    }
+
+}
+
+
+
+
+
+
+
 
 // Fonts
 /* inter-regular - latin */
