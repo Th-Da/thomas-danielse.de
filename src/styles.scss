@@ -1,9 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+    font-family: inter;
+    $type: font-size;
+
+    @if $type ==h1 {
+        font-size: 64px;
+    }
+
+    @if $type ==h2 {
+        font-size: 36px;
+    }
+
+    @else {
+        font-size: 18px;
+    }
+}
 
 body {
     margin: 0;
 }
-
 
 // Fonts
 /* inter-regular - latin */
