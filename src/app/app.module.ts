@@ -6,12 +6,18 @@ import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeSectionComponent } from './home-section/home-section.component';
+import { SkillSectionComponent } from './skill-section/skill-section.component';
+import { StartComponent } from './start/start.component';
+import { ImprintComponent } from './imprint/imprint.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomeSectionComponent
+    HomeSectionComponent,
+    SkillSectionComponent,
+    StartComponent,
+    ImprintComponent
   ],
   imports: [
     BrowserModule,

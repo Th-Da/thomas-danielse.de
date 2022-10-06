@@ -1,0 +1,20 @@
+<div class="skill-section">
+    <div class="skills">
+        <!--         <img src="assets/img/icons/javascript.png" alt="">
+        <img src="assets/img/icons/angular.png" alt="">
+        <img src="assets/img/icons/htmlcss.png" alt="">
+        <img src="assets/img/icons/scrum.png" alt="">
+        <img src="assets/img/icons/Git-Icon.png" alt="">
+        <img src="assets/img/icons/desingthinking.png" alt="">
+        <img src="assets/img/icons/restapi.png" alt="">
+        <img src="assets/img/icons/testautomation.png" alt="">
+        <img src="assets/img/icons/database.png" alt=""> -->
+
+        <div *ngFor="let skill of skills; let i=index;" class="skill-container">
+            <div class="single-skill-container">
+                <div>{{skill}}</div>
+                <img src="assets/img/icons/{{skillUrls[i]}}.png" alt="" class="single-skill">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+.skill-section {
+
+    background-color: #1A1A1A;
+    height: 100vh;
+    padding: 45px 210px 0 210px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.skill-container {
+    height: 105px;
+    width: 165px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.single-skill-container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+    color: black;
+    height: inherit;
+    position: relative;
+    bottom: 32px;
+}
+
+.single-skill {
+    height: 54px;
+}
