@@ -1,0 +1,23 @@
+<div class="my-work-section">
+    <h2>My work</h2>
+
+    <div>
+        <button class="secondary-dafault">All</button>
+        <button class="secondary-dafault">Angular</button>
+        <button class="secondary-dafault">Javascript</button>
+    </div>
+    <div class="projects">
+
+        <div class="position-relative" *ngFor="let project of projects; let i=index;">
+            <img src="assets/img/projects/{{projectUrls[i]}}.png" alt="">
+            <div (mouseover)="showCard=true;" (mouseout)="showCard=false" class="project-card">
+                <ng-container *ngIf="showCard">
+                    {{project}}
+                </ng-container>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- (mouseover)="showCard=true" (mouseout)="showCard=false" *ngIf="!showCard" -->

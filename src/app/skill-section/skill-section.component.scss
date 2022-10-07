@@ -1,8 +1,14 @@
-.skill-section {
+h2 {
+    margin-bottom: 60px;
+}
 
+.skill-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     background-color: #1A1A1A;
-    height: 100vh;
-    padding: 45px 210px 0 210px;
+    padding: 45px 0 45px 0;
 }
 
 .skills {
@@ -11,11 +17,12 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
+    width: 50%;
 }
 
 .skill-container {
-    height: 105px;
-    width: 165px;
+    height: 125px;
+    width: 185px;
     background-color: white;
     border-radius: 5px;
     margin: 20px;
@@ -29,9 +36,23 @@
     color: black;
     height: inherit;
     position: relative;
-    bottom: 32px;
+    bottom: 41px;
 }
 
-.single-skill {
-    height: 54px;
+.img-container {
+    background-color: white;
+    height: 70px;
+    border-radius: 50%;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 5px -2px #1a1a1a;
+
+    img {
+        height: 40px;
+        width: 40px;
+
+    }
 }

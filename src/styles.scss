@@ -48,7 +48,21 @@ body {
         background-color: #2dfcda;
         color: white;
     }
+}
 
+.secondary-dafault {
+    border: 3px solid #FA2759;
+    color: #FA2759;
+    background-color: #000000;
+    width: 210px;
+    height: 60px;
+    cursor: pointer;
+    transition: 150ms;
+
+    &:hover {
+        background-color: #FA2759;
+        color: white;
+    }
 }
 
 

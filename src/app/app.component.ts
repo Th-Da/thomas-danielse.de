@@ -16,9 +16,9 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this.navServ.test = "Mihai";
-    }, 2000)
+    /*     setTimeout(() => {
+          this.navServ.test = "Mihai";
+        }, 2000) */
 
   }
 }

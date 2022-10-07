@@ -6,18 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skill-section.component.scss']
 })
 export class SkillSectionComponent implements OnInit {
-  skills = ['Angular', 'HTML / CSS', 'Scrum', 'Git', 'Desingthinking', 'Restapi', 'Testautomation', 'Database'];
-  skillUrls = ['Angular', 'htmlcss', 'Scrum', 'Git', 'Desingthinking', 'Restapi', 'Testautomation', 'Database']
-  skillUrl = [];
+  skills = ['Javascript', 'Angular', 'HTML / CSS', 'Scrum', 'Git', 'Desingthinking', 'Restapi', 'Testautomation', 'Database'];
+  skillUrls = ['Javascript', 'Angular', 'htmlcss', 'Scrum', 'Git', 'Desingthinking', 'Restapi', 'Testautomation', 'Database'];
+
+
 
   ngOnInit(): void {
-    this.getSkillUrl();
-  }
 
-  getSkillUrl() {
-    for (let index = 0; index < this.skillUrls.length; index++) {
-      const skillUrl = this.skills[index];
-    }
   }
-
 }

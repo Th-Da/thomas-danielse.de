@@ -9,6 +9,9 @@ import { HomeSectionComponent } from './home-section/home-section.component';
 import { SkillSectionComponent } from './skill-section/skill-section.component';
 import { StartComponent } from './start/start.component';
 import { ImprintComponent } from './imprint/imprint.component';
+import { MyWorkComponent } from './my-work/my-work.component';
+import { AboutMeSectionComponent } from './about-me-section/about-me-section.component';
+import { ContactSectionComponent } from './contact-section/contact-section.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,10 @@ import { ImprintComponent } from './imprint/imprint.component';
     HomeSectionComponent,
     SkillSectionComponent,
     StartComponent,
-    ImprintComponent
+    ImprintComponent,
+    MyWorkComponent,
+    AboutMeSectionComponent,
+    ContactSectionComponent
   ],
   imports: [
     BrowserModule,
