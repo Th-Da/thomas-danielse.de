@@ -8,6 +8,8 @@
     </div>
     <div class="projects">
 
+
+        
         <div class="position-relative" *ngFor="let project of projects; let i=index;">
             <img src="assets/img/projects/{{projectUrls[i]}}.png" alt="">
             <div (mouseover)="showCard=true;" (mouseout)="showCard=false" class="project-card">
@@ -17,7 +19,8 @@
             </div>
         </div>
 
+
+
+
     </div>
 </div>
-
-<!-- (mouseover)="showCard=true" (mouseout)="showCard=false" *ngIf="!showCard" -->

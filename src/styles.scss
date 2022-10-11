@@ -152,3 +152,5 @@ body {
         url('assets/fonts/inter-v12-latin-900.svg#Inter') format('svg');
     /* Legacy iOS */
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

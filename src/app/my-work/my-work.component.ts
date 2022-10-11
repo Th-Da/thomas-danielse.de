@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyWorkComponent implements OnInit {
   projects = ['Join', 'El Pollo Loco', 'SpaceXRockets', 'SpaceXRockets'];
-  projectUrls = ['el_pollo-loco', 'Join', 'sapceXRockets', 'sapceXRockets'];
+  projectUrls = ['join', 'el_pollo_loco', 'sapcexrockets', 'sapcexrockets'];
 
 
   showCard: boolean;
