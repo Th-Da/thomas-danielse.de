@@ -25,23 +25,48 @@ button {
         margin: 12px;
         width: 500px;
         height: 300px;
+        border-radius: 5px;
 
-        &:hover {
-            filter: blur(3px);
-        }
+
     }
 }
 
 .project-card {
-    z-index: 1;
     position: absolute;
     top: 0;
     left: 0;
+    display: flex;
     object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     margin: 12px;
     width: 500px;
     height: 300px;
-    color: white;
+    color: black;
+    border-radius: 5px;
+
+    &:hover {
+        opacity: 1;
+        background-color: #ffffffb3;
+        animation: 175ms ease-out changeOpacity;
+        -webkit-box-shadow: 2px 2px 6px -3px #FA2759;
+        box-shadow: 3px 3px 10px -3px #fa2759;
+    }
+}
+
+@keyframes changeOpacity {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .position-relative {

@@ -9,12 +9,15 @@
     <div class="projects">
 
 
-        
-        <div class="position-relative" *ngFor="let project of projects; let i=index;">
-            <img src="assets/img/projects/{{projectUrls[i]}}.png" alt="">
-            <div (mouseover)="showCard=true;" (mouseout)="showCard=false" class="project-card">
-                <ng-container *ngIf="showCard">
-                    {{project}}
+
+        <div class="position-relative" *ngFor="let project of projectCard; let i=index;">
+            <img src="{{project.imgPath}}" class="project-img" alt="">
+            <div (mouseover)="project.showCard=true;" (mouseleave)="project.showCard=false" class="project-card">
+                <ng-container *ngIf="project.showCard">
+
+                    <h2>{{project.name}}</h2>
+                    <span>{{project.description}}</span>
+
                 </ng-container>
             </div>
         </div>
