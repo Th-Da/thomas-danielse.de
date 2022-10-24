@@ -1,5 +1,5 @@
 html {
-    font-family: inter;
+    font-family: inter !important;
     color: white;
 
     h1 {
@@ -34,6 +34,9 @@ a {
 body {
     margin: 0;
     box-sizing: border-box;
+    font-family: inter !important;
+    color: white;
+
 }
 
 .primary-default {

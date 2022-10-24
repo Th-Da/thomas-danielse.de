@@ -20,6 +20,7 @@ button {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
+    margin-top: 48px;
 
     img {
         margin: 12px;
@@ -37,7 +38,7 @@ button {
     left: 0;
     display: flex;
     object-fit: cover;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     margin: 12px;
@@ -53,6 +54,28 @@ button {
         -webkit-box-shadow: 2px 2px 6px -3px #FA2759;
         box-shadow: 3px 3px 10px -3px #fa2759;
     }
+
+    span{
+        width: 75%;
+        text-align: center;
+    }
+}
+
+.position-relative {
+    position: relative;
+}
+
+.try-out-button{
+background: white !important;
+
+    &:hover {
+        background-color: #FA2759 !important;
+        color: black;
+    }
+}
+
+.single-project{
+width: 80%;
 }
 
 @keyframes changeOpacity {
@@ -69,6 +92,3 @@ button {
     }
 }
 
-.position-relative {
-    position: relative;
-}

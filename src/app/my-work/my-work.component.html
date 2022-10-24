@@ -2,22 +2,23 @@
     <h2>My work</h2>
 
     <div>
-        <button class="secondary-dafault">All</button>
-        <button class="secondary-dafault">Angular</button>
-        <button class="secondary-dafault">Javascript</button>
+        <button (click)="showFramework($event)" class="secondary-dafault">All</button>
+        <button (click)="showFramework('angular')" class="secondary-dafault">Angular</button>
+        <button (click)="showFramework('vanillajs')" class="secondary-dafault">Javascript</button>
     </div>
+
     <div class="projects">
-
-
-
-        <div class="position-relative" *ngFor="let project of projectCard; let i=index;">
+        <div class="position-relative" *ngFor="let project of subcard; let i=index;">
             <img src="{{project.imgPath}}" class="project-img" alt="">
             <div (mouseover)="project.showCard=true;" (mouseleave)="project.showCard=false" class="project-card">
-                <ng-container *ngIf="project.showCard">
+                <ng-container *ngIf="project.showCard" class="single-project">
 
                     <h2>{{project.name}}</h2>
                     <span>{{project.description}}</span>
-
+                    <div>
+                    <button class="secondary-dafault try-out-button">Try out</button>
+                    <button class="secondary-dafault try-out-button">Show me the code</button>
+                </div>
                 </ng-container>
             </div>
         </div>

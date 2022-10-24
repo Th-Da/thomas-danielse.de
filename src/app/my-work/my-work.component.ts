@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-my-work',
   templateUrl: './my-work.component.html',
@@ -8,15 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class MyWorkComponent implements OnInit {
   projects = ['Join', 'El Pollo Loco', 'SpaceXRockets', 'SpaceXRockets'];
   projectUrls = ['join', 'el_pollo_loco', 'sapcexrockets', 'sapcexrockets'];
+  subcard: any = [];
 
-  projectCard = [
+  projectCard: any = [
     {
       "name": "Join - Kanbanboard",
       "imgPath": "assets/img/projects/join.png",
       "url": null,
       showCard: true,
       "description": "A Kanban board for projectmanagement. Builded in a team.",
-
+      "framework": "vanillajs"
     },
     {
       "name": "El Pollo Loco",
@@ -24,6 +26,7 @@ export class MyWorkComponent implements OnInit {
       "url": null,
       showCard: false,
       "description": "A 2D Jump and Run Game based on object-oriented programming (OOP)",
+      "framework": "vanillajs"
     },
     {
       "name": "SpaceX rockets",
@@ -31,6 +34,7 @@ export class MyWorkComponent implements OnInit {
       "url": null,
       showCard: false,
       "description": "A collection of the rockets from spaceX based on a API",
+      "framework": "vanillajs"
     },
     {
       "name": "SpaceXRockets",
@@ -38,6 +42,7 @@ export class MyWorkComponent implements OnInit {
       "url": null,
       showCard: false,
       "description": "A collection of the rockets from spaceX based on a API",
+      "framework": "angular"
     }
   ];
 
@@ -50,6 +55,24 @@ export class MyWorkComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.subcard = this.projectCard;
   }
+
+ 
+
+  showFramework(framework: any) {
+ 
+     const frame = this.projectCard.filter((subCard: any) => {return subCard.framework === framework});
+     this.subcard = frame;
+     console.log(frame)
+  }
+
+  showAllFrameworks() {
+    this.subcard = this.projectCard;
+  }
+
+  
+  
+
 
 }
