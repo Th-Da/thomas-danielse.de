@@ -61,15 +61,16 @@ export class MyWorkComponent implements OnInit {
  
 
   showFramework(framework: any) {
- 
-     const frame = this.projectCard.filter((subCard: any) => {return subCard.framework === framework});
+    if (framework === 'all') {
+      this.subcard = this.projectCard;
+    } else {
+      const frame = this.projectCard.filter((subCard: any) => {return subCard.framework === framework});
      this.subcard = frame;
      console.log(frame)
   }
+}
 
-  showAllFrameworks() {
-    this.subcard = this.projectCard;
-  }
+
 
   
   
