@@ -10,7 +10,9 @@ import { StartComponent } from './start/start.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { MyWorkComponent } from './my-work/my-work.component';
 import { AboutMeSectionComponent } from './about-me-section/about-me-section.component';
-import { ContactSectionComponent } from './contact-section/contact-section.component';
+import { ContactMeSectionComponent } from './contact-me-section/contact-me-section.component';
+import {MatFormFieldModule} from '@angular/material/form-field'; 
+
 
 @NgModule({
   declarations: [
@@ -22,11 +24,12 @@ import { ContactSectionComponent } from './contact-section/contact-section.compo
     ImprintComponent,
     MyWorkComponent,
     AboutMeSectionComponent,
-    ContactSectionComponent
+    ContactMeSectionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatFormFieldModule,
     NoopAnimationsModule
   ],
   providers: [],

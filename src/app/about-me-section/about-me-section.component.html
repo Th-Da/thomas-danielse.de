@@ -4,18 +4,16 @@
         <img src="assets/profil/profil2.PNG" alt="">
         <div class="about-me-text">
             <h2>About me.</h2>
-            <span>I'm a techik passionated skadkosa and front end developer who loves to dig deep into a subject</span>
+            <span>I'm a techik passionated skadkosa and front end developer who loves go deep into a subject</span>
         </div>
     </div>
         <div class="thats-me">
             <div *ngFor="let step of steps" class="my-steps">
-                <div>
                     <div class="img-background">
-                    <img src="{{ step.imgPath }}" alt="">
-                </div>
-                    <span>{{ step.head }}</span>
+                        <img src="{{ step.imgPath }}" alt="">
+                    </div>
+                    <span class="head">{{ step.head }}</span>
                     <span>{{ step.description }}</span>
-                </div>
 
             </div>
 

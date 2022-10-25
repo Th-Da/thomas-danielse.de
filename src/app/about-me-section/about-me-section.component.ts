@@ -20,7 +20,7 @@ export class AboutMeSectionComponent implements OnInit {
       "url": null,
       showCard: true,
       "head": "Passion",
-      "description": "...when i realized my passion for programming and solving problems in a logical way. But that was not enough why ..."
+      "description": "...when i realized my passion for programming and solving problems in a logical way. But that was not enough for me."
     },
     {
       "imgPath": "assets/img/icons/search-line.png",
