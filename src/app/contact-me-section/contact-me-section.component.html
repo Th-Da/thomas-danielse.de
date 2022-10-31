@@ -1,26 +1,23 @@
 <div class="contact-main-container">
+  <div class="contact-head">
     <h1>Contact me.</h1>
-    <span>Get in touch bia the form below, or by emailing wqetts</span>
-    <p>
-    <mat-form-field appearance="legacy">
-        <mat-label>Legacy form field</mat-label>
-        <input matInput placeholder="Enter your name">
-        <mat-hint>Hint</mat-hint>
+    <span>Get in touch via the form below or by emailing <br><a href="mailto:home@thomas-danielse.de"> home@thomas-danielse.de</a>.</span>
+  </div>
+
+  <form (submit)="sendMail()" ngNativeValidate class="contact-form">
+      <mat-form-field method="POST" appearance="outline">
+        <mat-label>Enter your name</mat-label>
+        <input #name name="name" matInput placeholder="Your name">
       </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field appearance="standard">
-        <mat-label>Standard form field</mat-label>
-        <input matInput placeholder="Enter your Email adress">
-        <mat-hint>Hint</mat-hint>
+      <mat-form-field method="POST" appearance="outline">
+        <mat-label>Enter your Email adress</mat-label>
+        <input #email name="email" matInput placeholder="Your email andress">
       </mat-form-field>
-    </p>
-    <p>
-      <mat-form-field appearance="fill">
-        <mat-label>Fill form field</mat-label>
-        <input matInput placeholder="Enter your message">
-        <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-        <mat-hint>Hint</mat-hint>
-      </mat-form-field>
-    </p>
+    <mat-form-field method="POST" class="message" appearance="fill">
+      <mat-label>Enter your message</mat-label>
+      <textarea #message name="message" matInput></textarea>
+    </mat-form-field>
+
+    <button type="submit" [disabled]="isDisabled" class="primary-default">Send</button>
+  </form>
 </div>

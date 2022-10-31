@@ -11,7 +11,13 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { MyWorkComponent } from './my-work/my-work.component';
 import { AboutMeSectionComponent } from './about-me-section/about-me-section.component';
 import { ContactMeSectionComponent } from './contact-me-section/contact-me-section.component';
-import {MatFormFieldModule} from '@angular/material/form-field'; 
+import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field'; 
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatNativeDateModule} from '@angular/material/core';
+import {HttpClientModule} from '@angular/common/http';
+import { MatInputModule } from '@angular/material/input';
+
 
 
 @NgModule({
@@ -30,9 +36,18 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     BrowserModule,
     AppRoutingModule,
     MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatNativeDateModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+
     NoopAnimationsModule
   ],
-  providers: [],
+  providers: [ 
+    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
