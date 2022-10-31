@@ -17,6 +17,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatNativeDateModule} from '@angular/material/core';
 import {HttpClientModule} from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -30,7 +31,8 @@ import { MatInputModule } from '@angular/material/input';
     ImprintComponent,
     MyWorkComponent,
     AboutMeSectionComponent,
-    ContactMeSectionComponent
+    ContactMeSectionComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

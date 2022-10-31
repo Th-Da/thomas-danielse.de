@@ -42,6 +42,16 @@ button {
     height: 60px;
     padding: 0 !important;
     margin-left: calc(100% - 150px);
+
+  
+}
+
+.disabledButton {
+    &:hover {
+        background-color: #000000 !important;
+        color: #2dfcda;
+        cursor: default;
+    }
 }
 
 // for the input field

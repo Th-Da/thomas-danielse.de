@@ -44,17 +44,24 @@ fd.append('name', name.value);
 fd.append('email', email.value);
 fd.append('message', message.value);
 
-  await fetch('https://w01d5c04.kasserver.com/send_mail.php', 
+  await fetch('https://w01d5c04.kasserver.com/thomas-danielse.de/send_mail.php', 
+  
     {
       method: 'POST', 
     body: fd
     }
   );
 
-  name.disabled = false;
+  console.log(fd);
+  
+
+/*   name.disabled = false;
   email.disabled = false;
-  message.disabled = false;
-  this.isDisabled = false;
+  message.disabled = false; */
 }
 
+
+disableButton() {
+  this.isDisabled = true;  
+}
 }

@@ -1,0 +1,38 @@
+.footer-container {
+    color: #000000;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10% 0 10%;
+
+}
+
+.footer-left {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-right {
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+
+    &:hover {
+        color: #FA2759;
+    }
+}
+
+img {
+    height: 50px;
+
+    &:hover {
+        background-color:#2dfcda ;
+    }
+}
