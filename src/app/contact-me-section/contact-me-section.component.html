@@ -11,15 +11,15 @@
   </div>
 
   <form (submit)="sendMail()" ngNativeValidate class="contact-form">
-    <mat-form-field method="POST" appearance="outline">
+    <mat-form-field appearance="outline">
       <mat-label>Enter your name</mat-label>
       <input #name name="name" matInput placeholder="Your name" />
     </mat-form-field>
-    <mat-form-field method="POST" appearance="outline">
+    <mat-form-field appearance="outline">
       <mat-label>Enter your Email adress</mat-label>
       <input #email name="email" matInput placeholder="Your email andress" />
     </mat-form-field>
-    <mat-form-field method="POST" class="message" appearance="fill">
+    <mat-form-field class="message" appearance="fill">
       <mat-label>Enter your message</mat-label>
       <textarea #message name="message" matInput></textarea>
     </mat-form-field>
