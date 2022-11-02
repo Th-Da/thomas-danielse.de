@@ -8,13 +8,14 @@
   </div>
 
   <mat-icon
-    type="button"
-    (click)="toggle()"
+    *ngIf="mobile"
     mat-button
     [matMenuTriggerFor]="menu"
-    @openClose
+    class="menu-button"
+    [@openClose]="isOpen"
     >table_rows</mat-icon
   >
+
   <mat-menu #menu="matMenu" class="toggle-nav-child">
     <button mat-menu-item><a href="#">SKILLS</a></button>
     <button mat-menu-item><a href="#">PORTFOLIO</a></button>

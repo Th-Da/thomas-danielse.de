@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import {
   trigger,
   state,
@@ -20,13 +20,33 @@ import {
   ],
 })
 export class NavbarComponent implements OnInit {
-  isOpen = true;
+  public screenWidth: any;
+  public screenHeight: any;
+
+  isOpen: string = 'default';
+
+  mobile: boolean = false;
+
+  ngOnInit() {
+    this.screenWidth = window.innerWidth;
+    this.screenHeight = window.innerHeight;
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.screenWidth = window.innerWidth;
+    this.screenHeight = window.innerHeight;
+
+    if (window.innerWidth < 700) {
+      this.mobile = true;
+    } else {
+      this.mobile = false;
+    }
+  }
 
   constructor() {}
 
-  ngOnInit(): void {}
-
   toggle() {
-    this.isOpen = !this.isOpen;
+    this.isOpen = this.isOpen === 'closed' ? 'open' : 'closed';
   }
 }

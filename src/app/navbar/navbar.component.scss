@@ -21,9 +21,15 @@ nav {
     }
 }
 
+/* .toggle-nav-button {
+    &:active {
+        transform: rotate(90deg);
+    
+    }
+}
+ */
 
 
-/* 
 @keyframes toggleNav {
     0% {
         transform: rotate(0);
@@ -37,11 +43,14 @@ nav {
 .open-nav-button {
  animation: 100ms ease-out 1.5s toggleNav forwards;
 }
- */
 
 
 
 
+
+@media (max-width: 1200px) {
+
+}
 
 
 
@@ -61,9 +70,5 @@ nav {
 
         }
     }
-
-
 }
-
-
 }
