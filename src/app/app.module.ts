@@ -11,15 +11,20 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { MyWorkComponent } from './my-work/my-work.component';
 import { AboutMeSectionComponent } from './about-me-section/about-me-section.component';
 import { ContactMeSectionComponent } from './contact-me-section/contact-me-section.component';
-import { MatFormFieldModule, MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field'; 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {MatNativeDateModule} from '@angular/material/core';
-import {HttpClientModule} from '@angular/common/http';
+import {
+  MatFormFieldModule,
+  MAT_FORM_FIELD_DEFAULT_OPTIONS,
+} from '@angular/material/form-field';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatNativeDateModule } from '@angular/material/core';
+import { HttpClientModule } from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input';
 import { FooterComponent } from './footer/footer.component';
-
-
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { OpenCloseComponent } from './open-close/open-close.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +37,8 @@ import { FooterComponent } from './footer/footer.component';
     MyWorkComponent,
     AboutMeSectionComponent,
     ContactMeSectionComponent,
-    FooterComponent
+    FooterComponent,
+    OpenCloseComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,14 +48,20 @@ import { FooterComponent } from './footer/footer.component';
     FormsModule,
     ReactiveFormsModule,
     MatNativeDateModule,
+    MatSidenavModule,
+    MatMenuModule,
     HttpClientModule,
+    MatIconModule,
     BrowserAnimationsModule,
 
-    NoopAnimationsModule
+    NoopAnimationsModule,
   ],
-  providers: [ 
-    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'fill'}}
+  providers: [
+    {
+      provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,
+      useValue: { appearance: 'fill' },
+    },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

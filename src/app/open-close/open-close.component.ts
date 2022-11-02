@@ -8,25 +8,19 @@ import {
 } from '@angular/animations';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss'],
+  selector: 'app-open-close',
+  templateUrl: './open-close.component.html',
+  styleUrls: ['./open-close.component.scss'],
   animations: [
     trigger('openClose', [
       state('open', style({ transform: 'rotate(90deg)' })),
-      state('closed', style({ transform: 'rotate(0deg)' })),
+      state('closed', style({ transform: 'rotate(-90deg)' })),
       transition('open <=> closed', [animate('100ms')]),
     ]),
   ],
 })
-export class NavbarComponent implements OnInit {
-  isOpen = true;
-
+export class OpenCloseComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
-
-  toggle() {
-    this.isOpen = !this.isOpen;
-  }
 }

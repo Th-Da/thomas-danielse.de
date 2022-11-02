@@ -1,10 +1,24 @@
 <nav>
-    <img routerLink="/" src="assets/logo/logo1.png" alt="logo">
-    <div>
-        <a href="#">HOME</a>
-        <a href="#">SKILLS</a>
-        <a href="#">PORTFOLIO</a>
-        <a class="about-link" href="#">ABOUT</a>
-    </div>
+  <img routerLink="/" src="assets/logo/logo1.png" alt="logo" />
+  <div class="links">
+    <a href="#">SKILLS</a>
+    <a href="#">PORTFOLIO</a>
+    <a class="about-link" href="#">ABOUT</a>
+    <a class="about-link" href="#">CONTACT</a>
+  </div>
 
+  <mat-icon
+    type="button"
+    (click)="toggle()"
+    mat-button
+    [matMenuTriggerFor]="menu"
+    @openClose
+    >table_rows</mat-icon
+  >
+  <mat-menu #menu="matMenu" class="toggle-nav-child">
+    <button mat-menu-item><a href="#">SKILLS</a></button>
+    <button mat-menu-item><a href="#">PORTFOLIO</a></button>
+    <button mat-menu-item><a class="about-link" href="#">ABOUT</a></button>
+    <button mat-menu-item><a class="about-link" href="#">CONTACT</a></button>
+  </mat-menu>
 </nav>

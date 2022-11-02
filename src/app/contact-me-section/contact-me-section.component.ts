@@ -1,5 +1,12 @@
 import { HttpClient } from '@angular/common/http';
+import { NONE_TYPE } from '@angular/compiler';
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { MatFormFieldAppearance } from '@angular/material/form-field';
 
 @Component({
@@ -9,17 +16,27 @@ import { MatFormFieldAppearance } from '@angular/material/form-field';
 })
 export class ContactMeSectionComponent implements OnInit {
   @ViewChild('focusTarget') focusTarget: any;
-
   @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('name') name!: ElementRef;
   @ViewChild('email') email!: ElementRef;
   @ViewChild('message') message!: ElementRef;
 
+  contactForm = new FormGroup({
+    name: new FormControl('', Validators.required),
+    email: new FormControl('', [
+      Validators.required,
+      Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
+    ]),
+    message: new FormControl('', Validators.required),
+  });
+
   isDisabled = false;
 
-  constructor() {}
+  constructor(private fb: FormBuilder) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.contactForm;
+  }
 
   focusTargetClick() {
     this.focusTarget.nativeElement.focus();

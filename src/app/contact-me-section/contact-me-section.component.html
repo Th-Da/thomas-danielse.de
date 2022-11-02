@@ -10,18 +10,43 @@
     >
   </div>
 
-  <form (submit)="sendMail()" ngNativeValidate class="contact-form">
+  <form
+    [formGroup]="contactForm"
+    (submit)="sendMail()"
+    ngNativeValidate
+    class="contact-form"
+  >
     <mat-form-field appearance="outline">
       <mat-label>Enter your name</mat-label>
-      <input #name name="name" matInput placeholder="Your name" />
+      <input
+        #name
+        name="name"
+        matInput
+        placeholder="Your name"
+        type="text"
+        formControlName="name"
+      />
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Enter your Email adress</mat-label>
-      <input #email name="email" matInput placeholder="Your email andress" />
+      <input
+        #email
+        name="email"
+        matInput
+        placeholder="Your email andress"
+        type="email"
+        formControllName="email"
+      />
     </mat-form-field>
     <mat-form-field class="message" appearance="fill">
       <mat-label>Enter your message</mat-label>
-      <textarea #message name="message" matInput></textarea>
+      <textarea
+        #message
+        name="message"
+        matInput
+        type="text"
+        formControlNameme="message"
+      ></textarea>
     </mat-form-field>
 
     <button
