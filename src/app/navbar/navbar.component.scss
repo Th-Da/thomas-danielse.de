@@ -1,24 +1,24 @@
 nav {
-    background-color: #000000;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px 105px 0 105px;
+  background-color: #000000;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 105px 0 105px;
 
-    a {
-        color: white;
-        text-decoration: none;
-        margin-left: 60px;
+  a {
+    color: white;
+    text-decoration: none;
+    margin-left: 60px;
 
-        &:hover {
-            color: #FA2759;
-        }
+    &:hover {
+      color: #fa2759;
     }
+  }
 
-    img {
-        cursor: pointer;
-    }
+  img {
+    cursor: pointer;
+  }
 }
 
 /* .toggle-nav-button {
@@ -29,46 +29,41 @@ nav {
 }
  */
 
-
 @keyframes toggleNav {
-    0% {
-        transform: rotate(0);
-    }
+  0% {
+    transform: rotate(0);
+  }
 
-    100% {
-        transform: rotate(90deg);
-    }
+  100% {
+    transform: rotate(90deg);
+  }
 }
 
 .open-nav-button {
- animation: 100ms ease-out 1.5s toggleNav forwards;
+  animation: 100ms ease-out 1.5s toggleNav forwards;
 }
-
-
-
-
 
 @media (max-width: 1200px) {
-
 }
 
-
-
-
-@media (max-width: 700px) {
-.links {
+@media (max-width: 720px) {
+  .links {
     display: none;
-}
+  }
 
-::ng-deep .toggle-nav-child {
-
+  ::ng-deep .toggle-nav-child {
     a {
-        text-decoration: none;
+      text-decoration: none;
 
-        &:active {
-            color: #FA2759;
-
-        }
+      &:active {
+        color: #fa2759;
+      }
     }
+  }
 }
+
+@media (max-width: 450px) {
+  nav {
+    padding: 24px 60px 24px 60px;
+  }
 }

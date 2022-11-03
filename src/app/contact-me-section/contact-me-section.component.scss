@@ -1,70 +1,69 @@
-
 :host {
 }
 
 .contact-main-container {
-    background-color: #000000;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    padding: 45px 0 45px 0;
+  background-color: #000000;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  padding: 45px 0 45px 0;
 }
 
 .contact-head {
-    display: flex;
-    flex-direction: column;
-    width: 45%;
-    margin-bottom: 80px;
-
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin-bottom: 80px;
 }
 
-h1 {
-   color: #2dfcda; 
+h2 {
+  color: #2dfcda;
+  margin-bottom: 25px;
 }
 
 a {
-    text-decoration: none;
-    color: #2dfcda;
-    cursor: pointer;
+  text-decoration: none;
+  color: #2dfcda;
+  cursor: pointer;
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    width: 45%;
-    height: 80%;
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  height: 80%;
 }
 
 button {
-    width: 150px;
-    height: 60px;
-    padding: 0 !important;
-    margin-left: calc(100% - 150px);
-
-  
+  width: 150px;
+  height: 60px;
+  padding: 0 !important;
+  margin-left: calc(100% - 150px);
 }
 
 .disabledButton {
-    &:hover {
-        background-color: #000000 !important;
-        color: #2dfcda;
-        cursor: default;
-    }
+  &:hover {
+    background-color: #000000 !important;
+    color: #2dfcda;
+    cursor: default;
+  }
 }
 
 // for the input field
 ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
-    color: rgb(50, 50, 50);
+  color: rgb(50, 50, 50);
 }
 
-::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-    color: #2dfcda;
+::ng-deep
+  .mat-form-field-appearance-outline.mat-focused
+  .mat-form-field-outline-thick {
+  color: #2dfcda;
 }
 
 ::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
-    color: #2dfcda;
+  color: #2dfcda;
 }
 
 /* .input-field {
@@ -72,15 +71,15 @@ button {
 } */
 
 // for the textarea
-::ng-deep.mat-form-field.mat-focused .mat-form-field-ripple{
-    background-color: #2dfcda;
+::ng-deep.mat-form-field.mat-focused .mat-form-field-ripple {
+  background-color: #2dfcda;
 }
 
 ::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
-    background-color: rgb(50, 50, 50);
+  background-color: rgb(50, 50, 50);
 }
 
 ::ng-deep textarea.mat-input-element {
-    height: 170px;
-    resize: none !important;
+  height: 170px;
+  resize: none !important;
 }

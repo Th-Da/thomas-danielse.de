@@ -71,7 +71,7 @@ body {
   }
 }
 
-@media (max-width: 715px) {
+@media (max-width: 600px) {
   .primary-default {
     padding: 12px 52px 12px 52px;
   }
@@ -81,12 +81,24 @@ body {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   h2 {
     font-size: 24px;
   }
   h1 {
     font-size: 32px;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 325px) {
+  h1 {
+    font-size: 16px;
   }
 }
 

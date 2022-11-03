@@ -6,10 +6,11 @@ import { Component, OnInit, HostListener } from '@angular/core';
   styleUrls: ['./my-work.component.scss'],
 })
 export class MyWorkComponent implements OnInit {
+  @HostListener('window:resize', ['$event'])
   public screenWidth: any;
   public screenHeight: any;
-
   mobile: boolean = false;
+  showCard: boolean;
 
   projects = ['Join', 'El Pollo Loco', 'SpaceXRockets', 'SpaceXRockets'];
   projectUrls = ['join', 'el_pollo_loco', 'sapcexrockets', 'sapcexrockets'];
@@ -51,29 +52,18 @@ export class MyWorkComponent implements OnInit {
     },
   ];
 
-  showCard: boolean;
-
   constructor() {
     this.showCard = false;
     console.log(this.showCard);
   }
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.screenWidth = window.innerWidth;
-    this.screenHeight = window.innerHeight;
-
-    if (window.innerWidth < 700) {
-      this.mobile = true;
-    } else {
-      this.mobile = false;
-    }
-  }
-
   ngOnInit(): void {
     this.subcard = this.projectCard;
-    this.screenWidth = window.innerWidth;
-    this.screenHeight = window.innerHeight;
+    this.getWindowSize();
+  }
+
+  onResize(event: any) {
+    this.getWindowSize();
   }
 
   showFramework(framework: any) {
@@ -85,6 +75,17 @@ export class MyWorkComponent implements OnInit {
       });
       this.subcard = frame;
       console.log(frame);
+    }
+  }
+
+  getWindowSize() {
+    this.screenWidth = window.innerWidth;
+    this.screenHeight = window.innerHeight;
+
+    if (window.innerWidth < 600) {
+      this.mobile = true;
+    } else {
+      this.mobile = false;
     }
   }
 }

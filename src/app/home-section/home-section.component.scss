@@ -50,6 +50,7 @@
 
 .name {
   font-size: 64px;
+  font-weight: 800;
 }
 
 .profil-img {
@@ -59,7 +60,8 @@
 }
 
 .contact-button {
-  right: 25%;
+  margin-top: 50px;
+  white-space: nowrap;
 }
 
 .arrow-img {
@@ -69,6 +71,9 @@
   cursor: pointer;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
 @media (max-width: 1200px) {
   .name {
     font-size: 48px;
@@ -82,15 +87,69 @@
   }
 }
 
-@media (max-width: 715px) {
+@media (max-width: 720px) {
   .profil-img {
     height: 300px;
-    margin-right: 30px;
+    margin-right: 0;
+  }
+
+  .home-section-child {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .header {
+    line-height: 20px;
+    margin-right: 0;
+  }
+
+  .contact-button {
+    margin-top: 20px;
   }
 }
 
 @media (max-width: 650px) {
   .name {
     font-size: 32px;
+  }
+  .header {
+    line-height: 10px;
+  }
+
+  .contact-button {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 450px) {
+  .profil-img {
+    height: 250px;
+  }
+
+  .name {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 325px) {
+  .header {
+    line-height: 0px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+}
+
+@media (max-height: 550px) {
+  .home-section {
+    height: auto;
+    padding: 0 10% 5% 10%;
+    .profil-img {
+      height: 200px;
+    }
+  }
+  .arrow-img {
+    display: none;
   }
 }

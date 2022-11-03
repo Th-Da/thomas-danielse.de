@@ -37,11 +37,8 @@ export class NavbarComponent implements OnInit {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
 
-    if (window.innerWidth < 700) {
-      this.mobile = true;
-    } else {
-      this.mobile = false;
-    }
+    if (window.innerWidth < 720) this.mobile = true;
+    else this.mobile = false;
   }
 
   constructor() {}
