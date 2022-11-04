@@ -43,32 +43,29 @@ export class ContactMeSectionComponent implements OnInit {
   }
 
   async sendMail() {
-    let name = this.name.nativeElement;
-    let email = this.email.nativeElement;
-    let message = this.message.nativeElement;
-    name.disabled = true;
-    email.disabled = true;
-    message.disabled = true;
-    this.isDisabled = true;
+    this.contactForm.disable();
 
     let fd = new FormData();
-    fd.append('name', name.value);
-    fd.append('email', email.value);
-    fd.append('message', message.value);
+    fd.append('name', this.contactForm.value.name as string);
+    fd.append('email', this.contactForm.value.email as string);
+    fd.append('message', this.contactForm.value.message as string);
 
-    console.log(fd);
+    try {
+      const response = await fetch(
+        'https://thomas-danielse.de/assets/send_mail.php',
+        {
+          method: 'POST',
+          body: fd,
+        }
+      );
 
-    await fetch(
-      'send_mail.php',
+      if (!response.ok) throw new Error('Response not ok');
 
-      {
-        method: 'POST',
-        body: JSON.stringify(fd),
-      }
-    );
-
-    console.log(fd);
-
+      this.isDisabled = false;
+    } catch (error) {
+      this.isDisabled = false;
+      console.log(error);
+    }
     /*   name.disabled = false;
   email.disabled = false;
   message.disabled = false; */

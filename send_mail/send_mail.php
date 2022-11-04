@@ -3,7 +3,7 @@
 ########### CONFIG ###############
 
 $recipient = 'home@thomas-danielse.de';
-$redirect = 'success.html';
+/* $redirect = 'success.html'; */
 
 ########### CONFIG END ###########
 
@@ -33,20 +33,24 @@ $redirect = 'success.html';
 switch ($_SERVER['REQUEST_METHOD']) {
     case ("OPTIONS"): //Allow preflighting to take place.
         header("Access-Control-Allow-Headers: content-type");
-        Header add Access-Control-Allow-Methods: "GET,POST,OPTIONS,DELETE,PUT"
-        Access-Control-Allow-Origin: http://localhost:4200/
+
 
         exit;
     case ("POST"): //Send the email;
 
         $subject = "Contact From " . $_POST['name'];
-        $headers = "From: " .$POST['email'];
+        $headers = "From: " . $POST['email'];
 
         mail($recipient, $subject, $_POST['message'], $headers);
-        header("Location: " . $redirect); 
+/*         header("Location: " . $redirect);  */
 
+echo var_dump($_POST);
+echo var_dump($_POST['email']);
+echo var_dump($_POST['name']);
+echo var_dump($_POST['message']);
         break;
     default: //Reject any non POST or OPTIONS requests.
         header("Allow: POST", true, 405);
         exit;
 }
+?>

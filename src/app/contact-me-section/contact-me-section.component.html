@@ -19,7 +19,6 @@
     <mat-form-field appearance="outline">
       <mat-label>Enter your name</mat-label>
       <input
-        #name
         name="name"
         matInput
         placeholder="Your name"
@@ -30,22 +29,20 @@
     <mat-form-field appearance="outline">
       <mat-label>Enter your Email adress</mat-label>
       <input
-        #email
         name="email"
         matInput
         placeholder="Your email andress"
         type="email"
-        formControllName="email"
+        formControlName="email"
       />
     </mat-form-field>
     <mat-form-field class="message" appearance="fill">
       <mat-label>Enter your message</mat-label>
       <textarea
-        #message
         name="message"
         matInput
         type="text"
-        formControlNameme="message"
+        formControlName="message"
       ></textarea>
     </mat-form-field>
 
