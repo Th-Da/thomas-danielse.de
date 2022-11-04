@@ -28,22 +28,25 @@ export class NavbarComponent implements OnInit {
   mobile: boolean = false;
 
   ngOnInit() {
-    this.screenWidth = window.innerWidth;
-    this.screenHeight = window.innerHeight;
+    this.getWindowSize();
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
-    this.screenWidth = window.innerWidth;
-    this.screenHeight = window.innerHeight;
-
-    if (window.innerWidth < 720) this.mobile = true;
-    else this.mobile = false;
+    this.getWindowSize();
   }
 
   constructor() {}
 
   toggle() {
     this.isOpen = this.isOpen === 'closed' ? 'open' : 'closed';
+  }
+
+  getWindowSize() {
+    this.screenWidth = window.innerWidth;
+    this.screenHeight = window.innerHeight;
+
+    if (window.innerWidth < 720) this.mobile = true;
+    else this.mobile = false;
   }
 }

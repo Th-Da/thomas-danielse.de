@@ -8,7 +8,7 @@ import { StartComponent } from './start/start.component';
 const routes: Routes = [
   { path: '', component: StartComponent },
   { path: 'imprint', component: ImprintComponent },
-  { path: 'legal-notice,', component: LegalNoticeComponent },
+  { path: 'legal-notice', component: LegalNoticeComponent },
 ];
 
 @NgModule({

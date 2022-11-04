@@ -6,7 +6,6 @@ import { Component, OnInit, HostListener } from '@angular/core';
   styleUrls: ['./my-work.component.scss'],
 })
 export class MyWorkComponent implements OnInit {
-  @HostListener('window:resize', ['$event'])
   public screenWidth: any;
   public screenHeight: any;
   mobile: boolean = false;
@@ -61,7 +60,7 @@ export class MyWorkComponent implements OnInit {
     this.subcard = this.projectCard;
     this.getWindowSize();
   }
-
+  @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.getWindowSize();
   }
@@ -81,7 +80,6 @@ export class MyWorkComponent implements OnInit {
   getWindowSize() {
     this.screenWidth = window.innerWidth;
     this.screenHeight = window.innerHeight;
-
     if (window.innerWidth < 600) {
       this.mobile = true;
     } else {

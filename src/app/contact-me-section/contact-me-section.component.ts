@@ -50,25 +50,17 @@ export class ContactMeSectionComponent implements OnInit {
     fd.append('email', this.contactForm.value.email as string);
     fd.append('message', this.contactForm.value.message as string);
 
-    try {
-      const response = await fetch(
-        'https://thomas-danielse.de/assets/send_mail.php',
-        {
-          method: 'POST',
-          body: fd,
-        }
-      );
+    const response = await fetch(
+      'https://thomas-danielse.de/assets/send_mail.php',
+      {
+        method: 'POST',
+        body: fd,
+      }
+    );
 
-      if (!response.ok) throw new Error('Response not ok');
+    if (!response.ok) throw new Error('Response not ok');
 
-      this.isDisabled = false;
-    } catch (error) {
-      this.isDisabled = false;
-      console.log(error);
-    }
-    /*   name.disabled = false;
-  email.disabled = false;
-  message.disabled = false; */
+    this.isDisabled = false;
   }
 
   disableButton() {

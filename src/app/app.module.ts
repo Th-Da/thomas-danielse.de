@@ -26,6 +26,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { OpenCloseComponent } from './open-close/open-close.component';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
+import * as AOS from 'aos';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,6 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
     HttpClientModule,
     MatIconModule,
     BrowserAnimationsModule,
-
     NoopAnimationsModule,
   ],
   providers: [

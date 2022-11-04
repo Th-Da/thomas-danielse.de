@@ -39,15 +39,16 @@ switch ($_SERVER['REQUEST_METHOD']) {
     case ("POST"): //Send the email;
 
         $subject = "Contact From " . $_POST['name'];
-        $headers = "From: " . $POST['email'];
+        $headers = "From: " . $_POST['email'];
 
         mail($recipient, $subject, $_POST['message'], $headers);
 /*         header("Location: " . $redirect);  */
 
-echo var_dump($_POST);
+/* echo var_dump($_POST);
 echo var_dump($_POST['email']);
 echo var_dump($_POST['name']);
-echo var_dump($_POST['message']);
+echo var_dump($_POST['message']); */
+echo var_dump($headers);
         break;
     default: //Reject any non POST or OPTIONS requests.
         header("Allow: POST", true, 405);

@@ -13,6 +13,11 @@
   }
 }
 
+.particles-js-canvas-el {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
 .home-section-child {
   display: flex;
   justify-content: space-between;
