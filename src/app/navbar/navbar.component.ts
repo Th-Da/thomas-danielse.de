@@ -6,6 +6,7 @@ import {
   animate,
   transition,
 } from '@angular/animations';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -36,7 +37,7 @@ export class NavbarComponent implements OnInit {
     this.getWindowSize();
   }
 
-  constructor() {}
+  constructor(private viewportScroller: ViewportScroller) {}
 
   toggle() {
     this.isOpen = this.isOpen === 'closed' ? 'open' : 'closed';
@@ -48,5 +49,9 @@ export class NavbarComponent implements OnInit {
 
     if (window.innerWidth < 720) this.mobile = true;
     else this.mobile = false;
+  }
+
+  onClickScroll(elementId: string): void {
+    this.viewportScroller.scrollToAnchor(elementId);
   }
 }

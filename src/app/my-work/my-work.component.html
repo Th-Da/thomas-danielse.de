@@ -1,4 +1,4 @@
-<div class="my-work-section">
+<div class="my-work-section" id="myWorkSection">
   <h2>My work</h2>
 
   <div class="languages-categories">
@@ -16,7 +16,7 @@
   <div class="projects">
     <div
       class="position-relative"
-      *ngFor="let project of subcard; let i = index"
+      *ngFor="let project of projectCard; let i = index"
     >
       <img src="{{ project.imgPath }}" alt="" />
       <div
@@ -32,8 +32,19 @@
           <h2>{{ project.name }}</h2>
           <span>{{ project.description }}</span>
           <div>
-            <button class="secondary-dafault try-out-button">Try out</button>
-            <button class="secondary-dafault try-out-button">View code</button>
+            <button
+              (click)="openProjectLink(project.URL)"
+              class="secondary-dafault try-out-button"
+            >
+              {{ projectCard.URL }}
+              Try out
+            </button>
+            <button
+              (click)="openProjectLink(project.gitURL)"
+              class="secondary-dafault try-out-button"
+            >
+              View code
+            </button>
           </div>
         </ng-container>
       </div>

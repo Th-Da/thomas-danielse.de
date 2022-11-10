@@ -1,39 +1,36 @@
-<div id="particles-js">
-  <div class="home-section">
-    <div class="home-section-child">
-      <div class="header">
-        <h1>Hi,</h1>
-        <h1>
-          I'm
-          <span
-            class="position-absolut name"
-            data-aos="fade-down"
-            data-aos-easing="ease-in-sine"
-            style="color: #fa2759"
-          >
-            Thomas
-          </span>
-          <span class="name-placeholder name"> Thomas </span>Danielse
-        </h1>
-        <h1>
-          Front End
-          <span class="nowrap name"
-            >develop<span class="letter-e name" style="color: #2dfcd8">e</span
-            >r</span
-          >
-        </h1>
-        <button class="primary-default contact-button">Contact me</button>
-      </div>
-      <img class="profil-img" src="assets/profil/profil2.PNG" alt="" />
+<div class="home-section">
+  <div class="home-section-child">
+    <div class="header">
+      <h1>Hi,</h1>
+      <h1>
+        I'm
+        <span
+          class="position-absolut name"
+          data-aos="fade-down"
+          data-aos-easing="ease-in-sine"
+          style="color: #fa2759"
+        >
+          Thomas
+        </span>
+        <span class="name-placeholder name"> Thomas </span>Danielse
+      </h1>
+      <h1>
+        Front End
+        <span class="nowrap name"
+          >develop<span class="letter-e name" style="color: #2dfcd8">e</span
+          >r</span
+        >
+      </h1>
+      <button
+        class="primary-default contact-button"
+        (click)="onClickScroll('contactMeSection')"
+      >
+        Contact me
+      </button>
     </div>
-    <a> <img class="arrow-img" src="assets/img/icons/arrow.png" alt="" /></a>
+    <img class="profil-img" src="assets/profil/profil2.PNG" alt="" />
   </div>
-  <!--   <canvas
-    class="particles-js-canvas-el"
-    width="937"
-    height="902"
-    style="width: 100%; height: 100%"
-  >
-  </canvas> -->
+  <a (click)="onClickScroll('skillSection')">
+    <img class="arrow-img" src="assets/img/icons/arrow.png" alt=""
+  /></a>
 </div>
-<script src="assets/particles.js"></script>

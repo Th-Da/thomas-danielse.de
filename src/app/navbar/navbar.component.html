@@ -1,10 +1,10 @@
 <nav>
   <img routerLink="/" src="assets/logo/logo1.png" alt="logo" />
   <div class="links">
-    <a href="#">SKILLS</a>
-    <a href="#">PORTFOLIO</a>
-    <a class="about-link" href="#">ABOUT</a>
-    <a class="about-link" href="#">CONTACT</a>
+    <a (click)="onClickScroll('skillSection')">SKILLS</a>
+    <a (click)="onClickScroll('myWorkSection')">PORTFOLIO</a>
+    <a (click)="onClickScroll('aboutMeSection')">ABOUT</a>
+    <a (click)="onClickScroll('contactMeSection')">CONTACT</a>
   </div>
 
   <mat-icon

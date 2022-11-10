@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as AOS from 'aos';
 import { NavigationService } from './navigation.service';
 
 @Component({
