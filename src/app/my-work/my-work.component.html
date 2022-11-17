@@ -17,6 +17,9 @@
     <div
       class="position-relative"
       *ngFor="let project of projectCard; let i = index"
+      data-aos="flip-left"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1000"
     >
       <img src="{{ project.imgPath }}" alt="" />
       <div

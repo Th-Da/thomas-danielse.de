@@ -1,7 +1,11 @@
 <div class="skill-section" id="skillSection">
   <h2>My skills</h2>
   <div class="skills">
-    <div *ngFor="let skill of skills; let i = index" class="skill-container">
+    <div
+      *ngFor="let skill of skills; let i = index"
+      class="skill-container"
+      data-aos="fade-right"
+    >
       <div class="single-skill-container">
         <span>{{ skill }}</span>
         <div class="img-container">

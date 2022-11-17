@@ -1,5 +1,3 @@
-import { HttpClient } from '@angular/common/http';
-import { NONE_TYPE } from '@angular/compiler';
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import {
   FormBuilder,
@@ -7,6 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
+import * as AOS from 'aos';
 import { MatFormFieldAppearance } from '@angular/material/form-field';
 
 @Component({
@@ -36,6 +35,8 @@ export class ContactMeSectionComponent implements OnInit {
 
   ngOnInit(): void {
     this.contactForm;
+
+    AOS.init();
   }
 
   focusTargetClick() {

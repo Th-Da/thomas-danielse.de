@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as AOS from 'aos';
 @Component({
   selector: 'app-skill-section',
   templateUrl: './skill-section.component.html',
@@ -30,5 +31,9 @@ export class SkillSectionComponent implements OnInit {
     'Database',
   ];
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    AOS.init({
+      duration: 1000,
+    });
+  }
 }

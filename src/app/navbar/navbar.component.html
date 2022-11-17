@@ -17,9 +17,21 @@
   >
 
   <mat-menu #menu="matMenu" class="toggle-nav-child">
-    <button mat-menu-item><a href="#">SKILLS</a></button>
-    <button mat-menu-item><a href="#">PORTFOLIO</a></button>
-    <button mat-menu-item><a class="about-link" href="#">ABOUT</a></button>
-    <button mat-menu-item><a class="about-link" href="#">CONTACT</a></button>
+    <button mat-menu-item>
+      <a class="about-link" (click)="onClickScroll('skillSection')">SKILLS</a>
+    </button>
+    <button mat-menu-item>
+      <a class="about-link" (click)="onClickScroll('myWorkSection')"
+        >PORTFOLIO</a
+      >
+    </button>
+    <button mat-menu-item>
+      <a class="about-link" (click)="onClickScroll('aboutMeSection')">ABOUT</a>
+    </button>
+    <button mat-menu-item>
+      <a class="about-link" (click)="onClickScroll('contactMeSection')"
+        >CONTACT</a
+      >
+    </button>
   </mat-menu>
 </nav>
