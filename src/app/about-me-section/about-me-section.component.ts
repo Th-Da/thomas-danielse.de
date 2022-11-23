@@ -13,7 +13,7 @@ export class AboutMeSectionComponent implements OnInit {
       showCard: true,
       head: 'The beginning',
       description:
-        'My journey began as an industrial mechanic and CNC programmer... ',
+        'My journey began as an industrial mechanic, CNC programmer, and 3D printing hobbyist.',
     },
     {
       imgPath: 'assets/img/icons/heart-line.png',
@@ -21,7 +21,7 @@ export class AboutMeSectionComponent implements OnInit {
       showCard: true,
       head: 'Passion',
       description:
-        '...when i discovered my passion for programming and solving problems analytically. But that was not enough for me.',
+        'That was when I discovered my passion for programming and solving problems analytically. So I taught myself some fundamental skills, including how to work in a programming environment and the basics of HTML.',
     },
     {
       imgPath: 'assets/img/icons/search-line.png',
@@ -29,15 +29,15 @@ export class AboutMeSectionComponent implements OnInit {
       showCard: true,
       head: 'I searched',
       description:
-        'for a way to deepen my understanding. Thats when i decided to work together with an professional academy for development, so that I could work on many projects and gain a lot of experience.',
+        'To advance my abilities to a professional level, I decided to work with a professional academy for web development. Therefore, I could work on a variety of projects and gain valuable experience.',
     },
     {
       imgPath: 'assets/img/icons/flight-takeoff-line.png',
       url: null,
       showCard: true,
-      head: 'The Goal',
+      head: 'The Goal.',
       description:
-        '... is to use my skills as a junior developer and learn new ones, to get better each day. ',
+        'Following the successful completion of my further education, I would like to put my experience as a junior frontend developer to the test and gain new experience.',
     },
   ];
 

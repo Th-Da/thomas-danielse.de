@@ -11,7 +11,7 @@
 .about-me-top {
   display: flex;
   align-items: center;
-  padding: 45px 10% 45px 30%;
+  padding: 45px 10% 45px 10%;
   margin: 0 10% 0 10%;
   border-bottom: 2px solid #2dfcda;
 
@@ -20,8 +20,10 @@
   }
 
   img {
-    height: 250px;
+    height: 300px;
     margin-right: 15%;
+    border-radius: 100%;
+    background-color: #fa2759;
   }
 }
 
@@ -74,7 +76,11 @@
 
 @media (max-width: 915px) {
   .about-me-top {
-    padding: 45px 10% 45px 10%;
+    padding: 45px 0% 45px 0;
+
+    img {
+      height: 250px;
+    }
   }
 }
 

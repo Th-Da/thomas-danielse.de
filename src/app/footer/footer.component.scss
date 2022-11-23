@@ -32,3 +32,11 @@ a {
 img {
   height: 50px;
 }
+
+@media (max-width: 625px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}

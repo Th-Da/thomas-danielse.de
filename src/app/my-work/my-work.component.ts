@@ -36,8 +36,8 @@ export class MyWorkComponent implements OnInit {
     {
       name: 'SpaceX rockets',
       imgPath: 'assets/img/projects/spacexrockets.png',
-      URL: 'https://rockets.thomas-danielse.de',
-      gitURL: '',
+      URL: 'http://rocketx.thomas-danielse.de/',
+      gitURL: 'https://github.com/Th-Da/spaceXRocket.git',
       showCard: false,
       description: 'A collection of the rockets from spaceX based on an API',
       framework: 'vanillajs',
