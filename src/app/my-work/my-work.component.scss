@@ -200,3 +200,11 @@ button {
     font-size: 12px;
   }
 }
+
+@media (min-width: 2000px) {
+  .projects img,
+  .project-card {
+    width: 820px;
+    height: 490px;
+  }
+}

@@ -10,12 +10,12 @@ export class MyWorkComponent implements OnInit {
   public screenWidth: any;
   public screenHeight: any;
   mobile: boolean = false;
-  showCard: boolean;
-  subcard: any = [];
+  public showCard: boolean;
+  public subcard: any = [];
 
   projectCard: any = [
     {
-      name: 'Join - Kanbanboard',
+      name: 'Join - Kanban Board',
       imgPath: 'assets/img/projects/join.jpg',
       URL: 'https://join.thomas-danielse.de',
       gitURL: 'https://github.com/Th-Da/JOIN.git',
@@ -30,7 +30,7 @@ export class MyWorkComponent implements OnInit {
       gitURL: 'https://github.com/Th-Da/El-Pollo-Loco-.git',
       showCard: false,
       description:
-        'A 2D Jump and Run Game based on object-oriented programming (OOP)',
+        'A 2D Jump and Run Game based on object-oriented programming.',
       framework: 'vanillajs',
     },
     {
@@ -39,22 +39,25 @@ export class MyWorkComponent implements OnInit {
       URL: 'http://rocketx.thomas-danielse.de/',
       gitURL: 'https://github.com/Th-Da/spaceXRocket.git',
       showCard: false,
-      description: 'A collection of the rockets from spaceX based on an API',
+      description: 'A collection of the rockets from SpaceX based on an API.',
       framework: 'vanillajs',
     },
-    /*     {
-      name: 'SpaceXRockets',
-      imgPath: 'assets/img/projects/spacexrockets.png',
+    {
+      name: 'Personal homepage',
+      imgPath: 'assets/img/projects/portfolio.jpg',
       URL: null,
-      gitURL: '',
+      gitURL: 'https://github.com/Th-Da/thomas-danielse.de.git',
       showCard: false,
-      description: 'A collection of the rockets from spaceX based on a API',
+      description: 'My homepage with the portfolio - build with Angular.',
       framework: 'angular',
-    }, */
+    },
   ];
 
   constructor() {
     this.showCard = false;
+  }
+  ngOnChange() {
+    this.subcard;
   }
 
   ngOnInit(): void {
@@ -63,6 +66,7 @@ export class MyWorkComponent implements OnInit {
 
     AOS.init();
   }
+
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.getWindowSize();

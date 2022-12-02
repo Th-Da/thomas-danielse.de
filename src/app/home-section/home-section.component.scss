@@ -68,6 +68,17 @@
 .contact-button {
   margin-top: 50px;
   white-space: nowrap;
+  border: 3px solid #2dfcda;
+  color: #2dfcda;
+  background-color: #000000;
+  padding: 24px 105px 24px 105px;
+  cursor: pointer;
+  transition: 150ms;
+
+  &:hover {
+    background-color: #2dfcda;
+    color: white;
+  }
 }
 
 .arrow-img {
@@ -103,15 +114,25 @@
     height: 300px;
     margin-right: 15px;
   }
+
+  .header {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 812px) {
   .name {
     font-size: 48px;
   }
+  .header {
+    margin: 0;
+  }
 }
 
 @media (max-width: 720px) {
+  .home-section {
+    align-content: center;
+  }
   .profil-img {
     height: 300px;
     margin-right: 0;
@@ -142,6 +163,12 @@
 
   .contact-button {
     margin-top: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-button {
+    padding: 12px 52px 12px 52px;
   }
 }
 
@@ -176,4 +203,22 @@
   .arrow-img {
     display: none;
   }
+}
+
+@media (min-width: 2000px) {
+  .profil-img {
+    height: 650px;
+  }
+
+  .arrow-img {
+    height: 110px;
+  }
+
+  /*   .name {
+    font-size: 110px !important;
+  }
+
+  .width-500 {
+    width: 500px !important;
+  } */
 }

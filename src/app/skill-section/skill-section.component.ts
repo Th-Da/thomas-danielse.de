@@ -13,9 +13,9 @@ export class SkillSectionComponent implements OnInit {
     'SCSS / SASS',
     'Scrum',
     'Git',
-    'Desingthinking',
-    'Restapi',
-    'Testautomation',
+    'Desingt Thinking',
+    'Rest API',
+    'Test Automation',
     'Database',
   ];
   skillUrls = [

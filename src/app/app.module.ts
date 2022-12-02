@@ -11,6 +11,10 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { MyWorkComponent } from './my-work/my-work.component';
 import { AboutMeSectionComponent } from './about-me-section/about-me-section.component';
 import { ContactMeSectionComponent } from './contact-me-section/contact-me-section.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { NgxSpinnerModule } from 'ngx-spinner';
+
 import {
   MatFormFieldModule,
   MAT_FORM_FIELD_DEFAULT_OPTIONS,
@@ -50,6 +54,8 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
     FormsModule,
     ReactiveFormsModule,
     MatNativeDateModule,
+    NgxSpinnerModule,
+    MatProgressBarModule,
     MatSidenavModule,
     MatMenuModule,
     HttpClientModule,
@@ -57,6 +63,7 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
     BrowserAnimationsModule,
     NoopAnimationsModule,
   ],
+  exports: [NgxSpinnerModule],
   providers: [
     {
       provide: MAT_FORM_FIELD_DEFAULT_OPTIONS,

@@ -6,7 +6,7 @@ import {
   Validators,
 } from '@angular/forms';
 import * as AOS from 'aos';
-import { MatFormFieldAppearance } from '@angular/material/form-field';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-contact-me-section',
@@ -31,12 +31,16 @@ export class ContactMeSectionComponent implements OnInit {
 
   isDisabled = false;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private spinner: NgxSpinnerService) {}
 
   ngOnInit(): void {
     this.contactForm;
 
     AOS.init();
+  }
+
+  spin() {
+    this.spinner.show();
   }
 
   focusTargetClick() {
@@ -58,10 +62,9 @@ export class ContactMeSectionComponent implements OnInit {
         body: fd,
       }
     );
-
     if (!response.ok) throw new Error('Response not ok');
-
     this.isDisabled = false;
+    if (response.ok) this.isDisabled = true;
   }
 
   disableButton() {

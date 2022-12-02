@@ -13,7 +13,7 @@ export class AboutMeSectionComponent implements OnInit {
       showCard: true,
       head: 'The beginning',
       description:
-        'My journey began as an industrial mechanic, CNC programmer, and 3D printing hobbyist.',
+        'My journey began as an industrial mechanic. I worked on CNC machines and programmed them. In my spare time, I have been a 3d printer hobbyist for a long time.',
     },
     {
       imgPath: 'assets/img/icons/heart-line.png',
@@ -35,9 +35,9 @@ export class AboutMeSectionComponent implements OnInit {
       imgPath: 'assets/img/icons/flight-takeoff-line.png',
       url: null,
       showCard: true,
-      head: 'The Goal.',
+      head: 'The Goal',
       description:
-        'Following the successful completion of my further education, I would like to put my experience as a junior frontend developer to the test and gain new experience.',
+        'Following the successful completion of my further education, I would like to put my experience as a junior front-end developer to the test and gain new experience.',
     },
   ];
 

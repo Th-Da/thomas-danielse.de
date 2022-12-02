@@ -27,7 +27,7 @@
       />
     </mat-form-field>
     <mat-form-field appearance="outline" data-aos="fade-left">
-      <mat-label>Enter your Email adress</mat-label>
+      <mat-label>Enter your Email address</mat-label>
       <input
         name="email"
         matInput
@@ -53,6 +53,15 @@
       class="primary-default"
     >
       Send
+      <div class="position-realtive">
+        <ngx-spinner
+          [fullScreen]="false"
+          size="medium"
+          type="ball-scale-multiple"
+          [zIndex]="9999"
+        ></ngx-spinner>
+      </div>
     </button>
   </form>
+  <button (click)="spin()"></button>
 </div>
