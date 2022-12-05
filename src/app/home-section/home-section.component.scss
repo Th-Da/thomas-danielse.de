@@ -4,7 +4,7 @@
   align-items: center;
   background-color: #000000;
   height: 100vh;
-  padding: 5% 10% 0 10%;
+  padding: 3% 10% 1% 10%;
 
   justify-content: space-evenly;
 
@@ -59,10 +59,11 @@
 }
 
 .profil-img {
-  height: 500px;
+  height: 450px;
   border-radius: 100%;
   margin-right: 60px;
   background-color: #2dfcd8;
+  margin-bottom: 17%;
 }
 
 .contact-button {
@@ -82,9 +83,10 @@
 }
 
 .arrow-img {
+  position: absolute;
   filter: brightness(0) invert(1);
-  bottom: 0;
   height: 40px;
+  top: 105%;
   cursor: pointer;
 }
 
@@ -127,6 +129,10 @@
   .header {
     margin: 0;
   }
+
+  .contact-button {
+    margin-top: 8px;
+  }
 }
 
 @media (max-width: 720px) {
@@ -149,7 +155,12 @@
   }
 
   .contact-button {
-    margin-top: 20px;
+    margin-top: 10px;
+    padding: 12px 52px 12px 52px;
+  }
+
+  .profil-img {
+    margin: 0;
   }
 }
 
@@ -163,12 +174,13 @@
 
   .contact-button {
     margin-top: 10px;
-  }
-}
-
-@media (max-width: 600px) {
-  .contact-button {
     padding: 12px 52px 12px 52px;
+  }
+
+  .arrow-img {
+    display: initial;
+    height: 24px;
+    top: 110%;
   }
 }
 
@@ -189,6 +201,10 @@
 
   .name {
     font-size: 16px;
+  }
+
+  .arrow-img {
+    top: 109%;
   }
 }
 
@@ -212,6 +228,7 @@
 
   .arrow-img {
     height: 110px;
+    top: 90%;
   }
 
   /*   .name {
