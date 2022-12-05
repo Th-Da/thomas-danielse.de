@@ -39,22 +39,18 @@ export class ContactMeSectionComponent implements OnInit {
     AOS.init();
   }
 
-  spin() {
-    this.spinner.show();
-  }
-
   focusTargetClick() {
     this.focusTarget.nativeElement.focus();
   }
 
   async sendMail() {
+    this.spin();
+    this.isDisabled = true;
     this.contactForm.disable();
-
     let fd = new FormData();
     fd.append('name', this.contactForm.value.name as string);
     fd.append('email', this.contactForm.value.email as string);
     fd.append('message', this.contactForm.value.message as string);
-
     const response = await fetch(
       'https://thomas-danielse.de/assets/send_mail.php',
       {
@@ -63,11 +59,16 @@ export class ContactMeSectionComponent implements OnInit {
       }
     );
     if (!response.ok) throw new Error('Response not ok');
-    this.isDisabled = false;
-    if (response.ok) this.isDisabled = true;
+    else {
+      setTimeout(() => {
+        this.isDisabled = false;
+        this.contactForm.enable();
+        this.spinner.hide();
+      }, 3000);
+    }
   }
 
-  disableButton() {
-    this.isDisabled = true;
+  spin() {
+    this.spinner.show();
   }
 }

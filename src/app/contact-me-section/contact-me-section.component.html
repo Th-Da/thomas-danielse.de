@@ -1,8 +1,7 @@
 <div class="contact-main-container" id="contactMeSection">
-  <div class="contact-head">
-    <h2>Contact me.</h2>
-    <span
-      >Get in touch via the form below or by emailing <br /><a
+    <div class="contact-head">
+        <h2>Contact me.</h2>
+        <span>Get in touch via the form below or by emailing <br /><a
         href="mailto:home@thomas-danielse.de"
       >
         home@thomas-danielse.de</a
@@ -45,7 +44,6 @@
         formControlName="message"
       ></textarea>
     </mat-form-field>
-
     <button
       type="submit"
       [disabled]="isDisabled"
@@ -55,13 +53,15 @@
       Send
       <div class="position-realtive">
         <ngx-spinner
-          [fullScreen]="false"
+          bdColor="rgba(0, 0, 0, 0.8)"
           size="medium"
-          type="ball-scale-multiple"
-          [zIndex]="9999"
-        ></ngx-spinner>
+          color="#2dfcda"
+          type="pacman"
+          [fullScreen]="true"
+          [style.overflow]="'hidden'"
+          ><p style="color: white">Sending...</p></ngx-spinner
+        >
       </div>
     </button>
   </form>
-  <button (click)="spin()"></button>
 </div>
