@@ -7,20 +7,19 @@ import {
   transition,
 } from '@angular/animations';
 import { ViewportScroller } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
-  animations: [
-    trigger('openClose', [
-      state('open', style({ transform: 'rotate(90deg)' })),
-      state('closed', style({ transform: 'rotate(0deg)' })),
-      transition('open <=> closed', [animate('100ms')]),
-    ]),
-  ],
 })
 export class NavbarComponent implements OnInit {
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.getWindowSize();
+  }
+
   public screenWidth: any;
   public screenHeight: any;
 
@@ -28,16 +27,14 @@ export class NavbarComponent implements OnInit {
 
   mobile: boolean = false;
 
+  constructor(
+    private viewportScroller: ViewportScroller,
+    public router: Router
+  ) {}
+
   ngOnInit() {
     this.getWindowSize();
   }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event: any) {
-    this.getWindowSize();
-  }
-
-  constructor(private viewportScroller: ViewportScroller) {}
 
   toggle() {
     this.isOpen = this.isOpen === 'closed' ? 'open' : 'closed';
@@ -52,6 +49,9 @@ export class NavbarComponent implements OnInit {
   }
 
   onClickScroll(elementId: string): void {
-    this.viewportScroller.scrollToAnchor(elementId);
+    this.router.navigate(['/']);
+    setTimeout(() => {
+      this.viewportScroller.scrollToAnchor(elementId);
+    }, 100);
   }
 }

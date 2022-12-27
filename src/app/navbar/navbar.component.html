@@ -12,26 +12,21 @@
     mat-button
     [matMenuTriggerFor]="menu"
     class="menu-button"
-    [@openClose]="isOpen"
     >table_rows</mat-icon
   >
 
   <mat-menu #menu="matMenu" class="toggle-nav-child">
-    <button mat-menu-item>
-      <a class="about-link" (click)="onClickScroll('skillSection')">SKILLS</a>
+    <button mat-menu-item (click)="onClickScroll('skillSection')">
+      <a class="about-link">SKILLS</a>
     </button>
-    <button mat-menu-item>
-      <a class="about-link" (click)="onClickScroll('myWorkSection')"
-        >PORTFOLIO</a
-      >
+    <button mat-menu-item (click)="onClickScroll('myWorkSection')">
+      <a class="about-link">PORTFOLIO</a>
     </button>
-    <button mat-menu-item>
-      <a class="about-link" (click)="onClickScroll('aboutMeSection')">ABOUT</a>
+    <button mat-menu-item (click)="onClickScroll('aboutMeSection')">
+      <a class="about-link">ABOUT</a>
     </button>
-    <button mat-menu-item>
-      <a class="about-link" (click)="onClickScroll('contactMeSection')"
-        >CONTACT</a
-      >
+    <button mat-menu-item (click)="onClickScroll('contactMeSection')">
+      <a class="about-link">CONTACT</a>
     </button>
   </mat-menu>
 </nav>

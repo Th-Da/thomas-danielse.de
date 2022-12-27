@@ -23,13 +23,9 @@ nav {
   }
 }
 
-/* .toggle-nav-button {
-    &:active {
-        transform: rotate(90deg);
-    
-    }
+mat-icon {
+  cursor: pointer;
 }
- */
 
 @keyframes toggleNav {
   0% {
@@ -45,22 +41,9 @@ nav {
   animation: 100ms ease-out 1.5s toggleNav forwards;
 }
 
-@media (max-width: 1200px) {
-}
-
 @media (max-width: 720px) {
   .links {
     display: none;
-  }
-
-  ::ng-deep .toggle-nav-child {
-    a {
-      text-decoration: none;
-
-      &:active {
-        color: #fa2759;
-      }
-    }
   }
 }
 
