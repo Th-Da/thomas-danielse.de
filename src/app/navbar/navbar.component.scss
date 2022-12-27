@@ -23,8 +23,36 @@ nav {
   }
 }
 
-mat-icon {
+.rotate-image {
+  animation: rotate 0.5s ease-in-out 0s;
+  animation-fill-mode: forwards;
   cursor: pointer;
+  z-index: 9999;
+}
+
+.rotate-image-back {
+  animation: rotateBack 0.5s ease-in-out 0s;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes rotateBack {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
 }
 
 @keyframes toggleNav {

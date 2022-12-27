@@ -7,13 +7,16 @@
     <a (click)="onClickScroll('contactMeSection')">CONTACT</a>
   </div>
 
-  <mat-icon
+  <img
+    src="assets/img/icons/menu-button.png"
+    alt=""
     *ngIf="mobile"
     mat-button
     [matMenuTriggerFor]="menu"
     class="menu-button"
-    >table_rows</mat-icon
-  >
+    id="menuButton"
+    (click)="rotateImage()"
+  />
 
   <mat-menu #menu="matMenu" class="toggle-nav-child">
     <button mat-menu-item (click)="onClickScroll('skillSection')">
