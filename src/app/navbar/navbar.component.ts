@@ -1,59 +1,37 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  HostListener,
+  ElementRef,
+  ViewChild,
+} from '@angular/core';
 import { ViewportScroller } from '@angular/common';
 import { Router } from '@angular/router';
-import {
-  trigger,
-  state,
-  style,
-  transition,
-  animate,
-  keyframes,
-} from '@angular/animations';
+import { MatMenu, MatMenuTrigger } from '@angular/material/menu';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
-  animations: [
-    // Each unique animation requires its own trigger. The first argument of the trigger function is the name
-    trigger('rotatedState', [
-      state('default', style({ transform: 'rotate(0)' })),
-      state('rotated', style({ transform: 'rotate(-180deg)' })),
-      transition('rotated => default', animate('1500ms ease-out')),
-      transition('default => rotated', animate('400ms ease-in')),
-    ]),
-  ],
-  // animations: [
-  //   trigger('rotateImage', [
-  //     state(
-  //       'closed',
-  //       style({
-  //         deg: 0,
-  //       })
-  //     ),
-  //     state(
-  //       'open',
-  //       style({
-  //         deg: 90,
-  //       })
-  //     ),
-  //     transition('closed => open', animate('500ms ease-in')),
-  //     transition('open => closed', animate('500ms ease-out')),
-  //   ]),
-  // ],
 })
 export class NavbarComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event: any) {
     this.getWindowSize();
   }
+  @HostListener('document:click', ['$event'])
+  documentClick(event: Event): void {
+    this.closeMenuButton(event);
+  }
+
+  @ViewChild('menuButton', { static: false })
+  menuButton: ElementRef;
+  @ViewChild('menuTrigger') menuTrigger: MatMenuTrigger;
 
   public screenWidth: any;
   public screenHeight: any;
-
-  state: string = 'default';
-
   mobile: boolean = false;
+  menuOpen: boolean = false;
 
   constructor(
     private viewportScroller: ViewportScroller,
@@ -63,32 +41,6 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.getWindowSize();
   }
-
-  ngAfterViewInit() {
-    // const menuButton = document.getElementById('menu-button') as HTMLElement;
-    // menuButton.addEventListener('click', function rotateImage(event))
-  }
-
-  rotate() {
-    debugger;
-    this.state = this.state === 'default' ? 'rotated' : 'default';
-  }
-
-  rotateImage() {
-    const menuButton = document.getElementById(
-      'menuButton'
-    ) as HTMLElement | null;
-    if (!menuButton.classList.contains('rotate-image')) {
-      menuButton.classList.remove('rotate-image-back');
-      menuButton.classList.add('rotate-image');
-    } else {
-      menuButton.classList.remove('rotate-image');
-      menuButton.classList.add('rotate-image-back');
-    }
-  }
-  // toggle() {
-  //   this.open = !this.open;
-  // }
 
   getWindowSize() {
     this.screenWidth = window.innerWidth;
@@ -100,8 +52,25 @@ export class NavbarComponent implements OnInit {
 
   onClickScroll(elementId: string): void {
     this.router.navigate(['/']);
+    console.log(this.menuOpen);
     setTimeout(() => {
       this.viewportScroller.scrollToAnchor(elementId);
     }, 100);
+  }
+
+  closeMenuButton(event) {
+    if (!this.buttonClicked(event) && this.menuOpen) {
+      this.menuButton.nativeElement.classList.toggle('active');
+      this.menuOpen = false;
+    }
+    if (this.buttonClicked(event)) {
+      this.menuOpen ? (this.menuOpen = false) : (this.menuOpen = true);
+    }
+  }
+
+  buttonClicked(event) {
+    return (
+      event.target.closest('.svg-conatainer') == this.menuButton?.nativeElement
+    );
   }
 }

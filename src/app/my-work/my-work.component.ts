@@ -15,6 +15,15 @@ export class MyWorkComponent implements OnInit {
 
   projectCard: any = [
     {
+      name: 'Slack-Clone',
+      imgPath: 'assets/img/projects/slack-clone.jpg',
+      URL: 'https://slack-clone.thomas-danielse.de/get-started',
+      gitURL: 'https://github.com/Th-Da/slack-clone',
+      showCard: false,
+      description: 'An Angular app of the popular Slack messenger',
+      framework: 'angular',
+    },
+    {
       name: 'Join - Kanban Board',
       imgPath: 'assets/img/projects/join.jpg',
       URL: 'https://join.thomas-danielse.de',
@@ -34,15 +43,6 @@ export class MyWorkComponent implements OnInit {
       framework: 'vanillajs',
     },
     {
-      name: 'SpaceX rockets',
-      imgPath: 'assets/img/projects/spacexrockets.png',
-      URL: 'http://rocketx.thomas-danielse.de/',
-      gitURL: 'https://github.com/Th-Da/spaceXRocket.git',
-      showCard: false,
-      description: 'A collection of the rockets from SpaceX based on an API.',
-      framework: 'vanillajs',
-    },
-    {
       name: 'Personal homepage',
       imgPath: 'assets/img/projects/portfolio.jpg',
       URL: null,
@@ -50,6 +50,15 @@ export class MyWorkComponent implements OnInit {
       showCard: false,
       description: 'My homepage with the portfolio - build with Angular.',
       framework: 'angular',
+    },
+    {
+      name: 'SpaceX rockets',
+      imgPath: 'assets/img/projects/spacexrockets.png',
+      URL: 'http://rocketx.thomas-danielse.de/',
+      gitURL: 'https://github.com/Th-Da/spaceXRocket.git',
+      showCard: false,
+      description: 'A collection of the rockets from SpaceX based on an API.',
+      framework: 'vanillajs',
     },
   ];
 
