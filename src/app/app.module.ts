@@ -28,7 +28,6 @@ import { FooterComponent } from './footer/footer.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
-import { OpenCloseComponent } from './open-close/open-close.component';
 import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
 
 @NgModule({
@@ -43,7 +42,6 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
     AboutMeSectionComponent,
     ContactMeSectionComponent,
     FooterComponent,
-    OpenCloseComponent,
     LegalNoticeComponent,
   ],
   imports: [

@@ -1,56 +1,39 @@
-<div class="my-work-section" id="myWorkSection">
-  <h2>My work</h2>
+<div class="my-work-section" id="myWorkSection" style="overflow-x: hidden">
+    <h2>My work</h2>
 
-  <div class="languages-categories">
-    <button (click)="showFramework('all')" class="secondary-dafault">
+    <div class="languages-categories">
+        <button (click)="showFramework('all')" class="secondary-dafault">
       All
     </button>
-    <button (click)="showFramework('angular')" class="secondary-dafault">
+        <button (click)="showFramework('angular')" class="secondary-dafault">
       Angular
     </button>
-    <button (click)="showFramework('vanillajs')" class="secondary-dafault">
+        <button (click)="showFramework('vanillajs')" class="secondary-dafault">
       Java Script
     </button>
-  </div>
+    </div>
 
-  <div class="projects">
-    <div
-      class="position-relative"
-      *ngFor="let project of subcard; let i = index"
-      data-aos="flip-left"
-      data-aos-easing="ease-out-cubic"
-      data-aos-duration="1000"
-    >
-      <img src="{{ project.imgPath }}" alt="" />
-      <div
-        (mouseover)="project.showCard = true"
-        (mouseleave)="project.showCard = false"
-        class="project-card"
-        [ngClass]="{
+    <div class="projects">
+        <div class="position-relative" *ngFor="let project of subcard; let i = index" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+            <img src="{{ project.imgPath }}" alt="" />
+            <div (mouseover)="project.showCard = true" (mouseleave)="project.showCard = false" class="project-card" [ngClass]="{
           'project-card': !mobile,
           'mobil-project-card': mobile
-        }"
-      >
-        <ng-container *ngIf="project.showCard" class="single-project">
-          <h2>{{ project.name }}</h2>
-          <span>{{ project.description }}</span>
-          <div>
-            <button
-              (click)="openProjectLink(project.URL)"
-              class="secondary-dafault try-out-button"
-            >
+        }">
+                <ng-container *ngIf="project.showCard" class="single-project">
+                    <h2>{{ project.name }}</h2>
+                    <span>{{ project.description }}</span>
+                    <div>
+                        <button (click)="openProjectLink(project.URL)" class="secondary-dafault try-out-button">
               {{ projectCard.URL }}
               Try out
             </button>
-            <button
-              (click)="openProjectLink(project.gitURL)"
-              class="secondary-dafault try-out-button"
-            >
+                        <button (click)="openProjectLink(project.gitURL)" class="secondary-dafault try-out-button">
               View code
             </button>
-          </div>
-        </ng-container>
-      </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
     </div>
-  </div>
 </div>

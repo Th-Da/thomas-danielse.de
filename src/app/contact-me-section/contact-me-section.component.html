@@ -9,13 +9,13 @@
     >
   </div>
 
-  <form
+  <form style="overflow-x: hidden"
     [formGroup]="contactForm"
     (submit)="sendMail()"
     ngNativeValidate
     class="contact-form"
   >
-    <mat-form-field appearance="outline" data-aos="fade-right">
+    <mat-form-field  appearance="outline" data-aos="fade-right">
       <mat-label>Enter your name</mat-label>
       <input
         name="name"
@@ -25,7 +25,7 @@
         formControlName="name"
       />
     </mat-form-field>
-    <mat-form-field appearance="outline" data-aos="fade-left">
+    <mat-form-field  appearance="outline" data-aos="fade-left">
       <mat-label>Enter your Email address</mat-label>
       <input
         name="email"
@@ -35,7 +35,7 @@
         formControlName="email"
       />
     </mat-form-field>
-    <mat-form-field class="message" appearance="fill" data-aos="fade-right">
+    <mat-form-field  class="message" appearance="fill" data-aos="fade-right">
       <mat-label>Enter your message</mat-label>
       <textarea
         name="message"
