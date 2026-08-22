@@ -1,0 +1,12 @@
+export { about } from './about.ts'
+export { contact } from './contact.ts'
+export { hero } from './hero.ts'
+export { legal } from './legal.ts'
+export { footerLinks, navItems } from './navigation.ts'
+export { profile } from './profile.ts'
+export { projectFilters, projects } from './projects.ts'
+export { skills } from './skills.ts'
+
+export type { AboutStep } from './about.ts'
+export type { Project, ProjectFramework } from './projects.ts'
+export type { Skill } from './skills.ts'

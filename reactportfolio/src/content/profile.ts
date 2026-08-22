@@ -1,0 +1,20 @@
+export const profile = {
+  displayName: 'Thomas Danielse',
+  firstName: 'Thomas',
+  lastName: 'Danielse',
+  role: 'front-end developer',
+  email: 'home@thomas-danielse.de',
+  phone: '0176-93799894',
+  phoneInternational: '+49 176 93799894',
+  address: {
+    street: 'Frankfurter Straße 31',
+    city: '70376 Stuttgart',
+  },
+  githubUrl: 'https://github.com/Th-Da/',
+  linkedinUrl: 'https://www.linkedin.com/in/thomas-danielse-900172258/',
+  logoPath: '/logo/logo1.png',
+  githubIconPath: '/icons/github-fill.png',
+  linkedinIconPath: '/icons/linkedin.png',
+  heroPortraitPath: 'assets/profil/profil1.png',
+  aboutPortraitPath: 'assets/profil/profil2.png',
+} as const

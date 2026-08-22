@@ -1,7 +1,19 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Layout } from './components/layout/Layout.tsx'
+import { HomePage } from './pages/HomePage.tsx'
+import { ImprintPage } from './pages/ImprintPage.tsx'
+import { LegalNoticePage } from './pages/LegalNoticePage.tsx'
+
 export default function App() {
   return (
-    <main className="flex min-h-svh items-center justify-center p-8">
-      <p className="text-fg">thomas-danielse.de — React scaffold</p>
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/imprint" element={<ImprintPage />} />
+          <Route path="/legal-notice" element={<LegalNoticePage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   )
 }

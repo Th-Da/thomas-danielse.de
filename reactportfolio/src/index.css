@@ -1,11 +1,40 @@
 @import 'tailwindcss';
 
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/inter-v12-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/inter-v12-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('/fonts/inter-v12-latin-800.woff2') format('woff2');
+}
+
 @theme {
   --color-bg: #000000;
   --color-bg-muted: #1a1a1a;
   --color-fg: #ffffff;
   --color-accent: #2dfcda;
   --color-accent-alt: #fa2759;
+  --font-sans: Inter, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -18,9 +47,20 @@ body {
   margin: 0;
   background: var(--color-bg);
   color: var(--color-fg);
+  font-family: var(--font-sans);
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
   *,
   *::before,
   *::after {
@@ -29,4 +69,49 @@ body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+.legal-content {
+  max-width: 65ch;
+}
+
+.legal-content :is(h1, h2, h3, h4) {
+  color: var(--color-fg);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.legal-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.legal-content h2 {
+  font-size: 1.35rem;
+  margin: 2rem 0 0.75rem;
+}
+
+.legal-content h3,
+.legal-content h4 {
+  font-size: 1.1rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.legal-content p,
+.legal-content li {
+  margin: 0.75rem 0;
+  line-height: 1.65;
+  color: #e5e5e5;
+}
+
+.legal-content a {
+  color: var(--color-accent);
+}
+
+.legal-content a:hover {
+  color: var(--color-accent-alt);
+}
+
+.legal-content ul {
+  padding-left: 1.25rem;
 }
