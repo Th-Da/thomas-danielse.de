@@ -1,5 +1,5 @@
 h2 {
-  margin-bottom: 60px;
+  margin-bottom: 48px;
 }
 
 .skill-section {
@@ -17,15 +17,15 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  width: 50%;
+  width: min(720px, 90%);
 }
 
 .skill-container {
-  height: 125px;
-  width: 185px;
+  height: 110px;
+  width: 164px;
   background-color: white;
   border-radius: 5px;
-  margin: 20px;
+  margin: 17px;
 }
 
 .single-skill-container {
@@ -36,14 +36,19 @@ h2 {
   color: black;
   height: inherit;
   position: relative;
-  bottom: 41px;
+  bottom: 37px;
+
+  span {
+    font-size: 15px;
+    text-align: center;
+    padding: 0 6px;
+  }
 }
 
 .img-container {
   background-color: white;
-  height: 70px;
-  border-radius: 50%;
-  width: 70px;
+  height: 62px;
+  width: 62px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,58 +56,54 @@ h2 {
   box-shadow: 0px 1px 5px -2px #1a1a1a;
 
   img {
-    height: 40px;
-    width: 40px;
-  }
-}
-
-@media (min-width: 1945px) {
-  .skills {
-    width: 35%;
-  }
-}
-
-@media (max-width: 1367px) {
-  .skills {
-    width: 60%;
-  }
-}
-
-@media (max-width: 767px) {
-  .skills {
-    width: 70%;
+    height: 35px;
+    width: 35px;
   }
 }
 
 @media (max-width: 660px) {
+  .skills {
+    width: 92%;
+  }
+
   .skill-container {
-    height: 90px;
-    width: 130px;
+    height: 85px;
+    width: 124px;
+    margin: 12px;
   }
 
   .single-skill-container {
-    bottom: 34px;
+    bottom: 31px;
+
+    span {
+      font-size: 13px;
+    }
   }
 
   .img-container {
-    height: 60px;
-    width: 60px;
+    height: 54px;
+    width: 54px;
 
     img {
-      height: 32px;
-      width: 32px;
+      height: 29px;
+      width: 29px;
     }
   }
 }
 
 @media (max-width: 500px) {
   .skill-container {
-    height: 60px;
-    width: 90px;
+    height: 64px;
+    width: 95px;
+    margin: 8px;
   }
 
   .single-skill-container {
-    bottom: 20px;
+    bottom: 22px;
+
+    span {
+      font-size: 12px;
+    }
   }
 
   .img-container {
@@ -110,36 +111,8 @@ h2 {
     width: 42px;
 
     img {
-      height: 25px;
-      width: 25px;
+      height: 24px;
+      width: 24px;
     }
   }
-
-  span {
-    font-size: 12px;
-  }
-}
-
-@media (min-width: 2000px) {
-  /*   .skill-container {
-    height: 226px;
-    width: 375px;
-    background-color: white;
-    border-radius: 5px;
-    margin: 35px;
-  }
-
-  .img-container img {
-    height: 75px;
-    width: 75px;
-  }
-
-  .img-container {
-    height: 120px;
-    width: 120px;
-  }
-
-  .single-skill-container {
-    bottom: 60px;
-  } */
 }

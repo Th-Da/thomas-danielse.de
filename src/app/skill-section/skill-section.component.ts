@@ -9,6 +9,7 @@ export class SkillSectionComponent implements OnInit {
   skills = [
     'Java Script',
     'Angular',
+    'React',
     'HTML',
     'SCSS / SASS',
     'Scrum',
@@ -21,6 +22,7 @@ export class SkillSectionComponent implements OnInit {
   skillUrls = [
     'javascript',
     'angular',
+    'react',
     'html',
     'scss',
     'Scrum',

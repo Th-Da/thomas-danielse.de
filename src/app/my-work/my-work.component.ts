@@ -15,6 +15,16 @@ export class MyWorkComponent implements OnInit {
 
   projectCard: any = [
     {
+      name: "3D CV",
+      imgPath: "assets/img/projects/3d_cv.jpg",
+      URL: "https://th-da.github.io/3D-CV",
+      gitURL: "https://github.com/Th-Da/3D-CV",
+      showCard: false,
+      description:
+        "An interactive, walkable version of my CV. AI-driven development. Work in progress.",
+      framework: "react",
+    },
+    {
       name: "Slack-Clone",
       imgPath: "assets/img/projects/slack-clone.jpg",
       URL: "https://team-talks.thomas-danielse.de/get-started",
