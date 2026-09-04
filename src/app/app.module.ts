@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeSectionComponent } from './home-section/home-section.component';
 import { SkillSectionComponent } from './skill-section/skill-section.component';
@@ -59,7 +58,6 @@ import { LegalNoticeComponent } from './legal-notice/legal-notice.component';
     HttpClientModule,
     MatIconModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule,
   ],
   exports: [NgxSpinnerModule],
   providers: [

@@ -11,7 +11,7 @@
 
   <form style="overflow-x: hidden"
     [formGroup]="contactForm"
-    (submit)="sendMail()"
+    (submit)="sendMail($event)"
     ngNativeValidate
     class="contact-form"
   >
@@ -23,6 +23,7 @@
         placeholder="Your name"
         type="text"
         formControlName="name"
+        autocomplete="name"
       />
     </mat-form-field>
     <mat-form-field  appearance="outline" data-aos="fade-left">
@@ -33,6 +34,7 @@
         placeholder="Your email andress"
         type="email"
         formControlName="email"
+        autocomplete="email"
       />
     </mat-form-field>
     <mat-form-field  class="message" appearance="fill" data-aos="fade-right">
@@ -44,6 +46,30 @@
         formControlName="message"
       ></textarea>
     </mat-form-field>
+
+    <!-- Honeypot: hidden from users, bots often fill it -->
+    <div class="hp" aria-hidden="true">
+      <label for="website">Website</label>
+      <input
+        id="website"
+        type="text"
+        name="website"
+        formControlName="website"
+        tabindex="-1"
+        autocomplete="off"
+      />
+    </div>
+
+    <p
+      class="form-status"
+      [class.form-status--success]="statusType === 'success'"
+      [class.form-status--error]="statusType === 'error'"
+      *ngIf="statusType !== 'idle'"
+      role="status"
+    >
+      {{ statusMessage }}
+    </p>
+
     <button
       type="submit"
       [disabled]="isDisabled"
@@ -51,17 +77,16 @@
       class="primary-default"
     >
       Send
-      <div class="position-realtive">
-        <ngx-spinner
-          bdColor="rgba(0, 0, 0, 0.8)"
-          size="medium"
-          color="#2dfcda"
-          type="pacman"
-          [fullScreen]="true"
-          [style.overflow]="'hidden'"
-          ><p style="color: white">Sending...</p></ngx-spinner
-        >
-      </div>
     </button>
   </form>
+
+  <ngx-spinner
+    bdColor="rgba(0, 0, 0, 0.8)"
+    size="medium"
+    color="#2dfcda"
+    type="pacman"
+    [fullScreen]="true"
+  >
+    <p style="color: white">Sending...</p>
+  </ngx-spinner>
 </div>

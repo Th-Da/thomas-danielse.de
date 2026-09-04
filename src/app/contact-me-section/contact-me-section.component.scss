@@ -48,9 +48,26 @@ button {
     }
 }
 
-.position-realtive {
-    position: relative !important;
-    bottom: 10px;
+.hp {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.form-status {
+    margin: 0 0 16px;
+    font-size: 0.95rem;
+
+    &--success {
+        color: #2dfcda;
+    }
+
+    &--error {
+        color: #fa2759;
+    }
 }
 
 // for the input field
