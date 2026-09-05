@@ -34,7 +34,7 @@ endpoint on the same domain.
 - **AOS** — scroll-triggered section animations
 - **ngx-spinner** — feedback while the contact form submits
 - **TypeScript** — Angular baseline
-- **PHP (`send_mail/send_mail.php`)** — server-side mail for the contact form
+- **PHP (`src/assets/send_mail.php`)** — server-side mail for the contact form
 
 ## Running it locally
 
